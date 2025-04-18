@@ -1,0 +1,39 @@
+.reviews-container {
+  display: flex;
+}
+
+.reviews-content {
+  margin-left: 220px;
+  padding: 2rem;
+  flex: 1;
+  background: #f4f4f4;
+  min-height: 100vh;
+}
+
+.reviews-content h2 {
+  color: #2c3e50;
+  margin-bottom: 2rem;
+}
+
+.review-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.review-table th,
+.review-table td {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.review-table th {
+  background: #2c3e50;
+  color: white;
+}
+
+.review-table td {
+  color: #34495e;
+}
