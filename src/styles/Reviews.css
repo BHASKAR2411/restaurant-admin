@@ -6,7 +6,8 @@
   margin-left: 220px;
   padding: 2rem;
   flex: 1;
-  background: #f4f4f4;
+  background: url('../assets/header5.png') no-repeat center center fixed;
+  background-size: cover;
   min-height: 100vh;
 }
 
@@ -18,7 +19,7 @@
 .review-table table {
   width: 100%;
   border-collapse: collapse;
-  background: white;
+  background: rgba(255, 255, 255, 0.5);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -36,4 +37,12 @@
 
 .review-table td {
   color: #34495e;
+}
+
+.page-footer {
+  text-align: center;
+  padding: 1rem 0;
+  color: #34495e;
+  font-size: 0.9rem;
+  margin-top: auto;
 }

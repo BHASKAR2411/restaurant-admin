@@ -33,6 +33,9 @@ const Reviews = () => {
         {loading && <LoadingSpinner />}
         <h2>Customer Reviews</h2>
         <ReviewTable reviews={reviews} />
+        <footer className="page-footer">
+          Powered by SAE. All rights reserved.
+        </footer>
       </div>
     </div>
   );

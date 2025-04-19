@@ -73,6 +73,9 @@ const Orders = () => {
         <h2>Orders</h2>
         <OrderTable title="Live Orders" orders={liveOrders} onComplete={handleComplete} onDelete={handleDelete} />
         <OrderTable title="Past Orders" orders={pastOrders} />
+        <footer className="page-footer">
+          Powered by SAE. All rights reserved.
+        </footer>
       </div>
     </div>
   );

@@ -3,7 +3,8 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: #f4f4f4;
+  background: url('../assets/header5.png') no-repeat center center fixed;
+  background-size: cover;
 }
 
 .signup-box {
@@ -14,6 +15,11 @@
   width: 100%;
   max-width: 400px;
   text-align: center;
+}
+
+.signup-logo {
+  width: 100px;
+  margin-bottom: 1rem;
 }
 
 .signup-box h2 {
@@ -37,7 +43,7 @@
 .signup-box button {
   margin-top: 1rem;
   padding: 0.75rem;
-  background: #28a745;
+  background: #55c1ef;
   color: white;
   border: none;
   border-radius: 4px;
@@ -47,7 +53,7 @@
 }
 
 .signup-box button:hover {
-  background: #218838;
+  background: #1d4999;
 }
 
 .signup-box p {
@@ -56,7 +62,7 @@
 }
 
 .signup-box a {
-  color: #28a745;
+  color: #55c1ef;
   text-decoration: none;
 }
 

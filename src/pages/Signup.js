@@ -4,6 +4,7 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 import * as yup from 'yup';
 import LoadingSpinner from '../components/LoadingSpinner';
+import logo from '../assets/logo.png';
 import '../styles/Signup.css';
 
 // Separate schemas for initial signup and OTP verification
@@ -97,6 +98,7 @@ const Signup = () => {
     <div className="signup-container">
       {loading && <LoadingSpinner />}
       <div className="signup-box">
+        <img src={logo} alt="Logo" className="signup-logo" />
         <h2>{otpSent ? 'Verify OTP' : 'Sign Up'}</h2>
         <form onSubmit={handleSubmit}>
           {!otpSent ? (

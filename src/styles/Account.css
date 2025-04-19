@@ -6,7 +6,8 @@
   margin-left: 220px;
   padding: 2rem;
   flex: 1;
-  background: #f4f4f4;
+  background: url('../assets/header5.png') no-repeat center center fixed;
+  background-size: cover;
   min-height: 100vh;
 }
 
@@ -24,7 +25,7 @@
 /* Left Side: User Info */
 .user-info {
   flex: 1;
-  background: white;
+  background: rgba(255, 255, 255, 0.5);
   padding: 1.5rem;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -89,7 +90,7 @@
 /* Right Side: Form */
 .account-form {
   flex: 1;
-  background: white;
+  background: rgba(255, 255, 255, 0.5);
   padding: 1.5rem;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -114,7 +115,7 @@
 
 .account-form button {
   padding: 0.75rem;
-  background: #28a745;
+  background: #55c1ef;
   color: white;
   border: none;
   border-radius: 4px;
@@ -124,7 +125,7 @@
 }
 
 .account-form button:hover {
-  background: #218838;
+  background: #1d4999;
 }
 
 .account-form button:disabled {
@@ -159,4 +160,12 @@
 .logout-btn:disabled {
   background: #6c757d;
   cursor: not-allowed;
+}
+
+.page-footer {
+  text-align: center;
+  padding: 1rem 0;
+  color: #34495e;
+  font-size: 0.9rem;
+  margin-top: auto;
 }

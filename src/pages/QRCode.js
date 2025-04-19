@@ -47,7 +47,7 @@ const QRCode = () => {
         { tableNo: parseInt(tableNo) },
         { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } }
       );
-      await fetchTables(); // Refetch tables after creation
+      await fetchTables();
       setTableNo('');
       toast.success('QR code generated');
     } catch (error) {
@@ -64,7 +64,7 @@ const QRCode = () => {
         `${process.env.REACT_APP_API_URL}/tables/${id}`,
         { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } }
       );
-      await fetchTables(); // Refetch tables after deletion
+      await fetchTables();
       toast.success('QR code deleted successfully');
     } catch (error) {
       toast.error(error.response?.data?.message || 'Failed to delete QR code');
@@ -163,6 +163,9 @@ const QRCode = () => {
             </div>
           ))}
         </div>
+        <footer className="page-footer">
+          Powered by SAE. All rights reserved.
+        </footer>
       </div>
     </div>
   );

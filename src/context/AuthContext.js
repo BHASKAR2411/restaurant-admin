@@ -1,6 +1,6 @@
 import React, { createContext, useState, useEffect } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom'; // Add useLocation
 import { toast } from 'react-toastify';
 
 export const AuthContext = createContext();
@@ -11,10 +11,14 @@ export const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [isUserUpdated, setIsUserUpdated] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation(); // Add useLocation to get current route
 
   useEffect(() => {
     const storedToken = localStorage.getItem('token');
     const userId = localStorage.getItem('userId');
+
+    // Define public routes that don't require authentication
+    const publicRoutes = ['/login', '/signup', '/forgot-password', '/reset-password'];
 
     if (storedToken && userId && !isUserUpdated) {
       axios
@@ -34,7 +38,10 @@ export const AuthProvider = ({ children }) => {
           setToken(null);
           setLoading(false);
           toast.error('Session expired. Please log in again.');
-          navigate('/login');
+          // Only redirect to /login if not on a public route
+          if (!publicRoutes.includes(location.pathname)) {
+            navigate('/login');
+          }
         });
     } else {
       localStorage.removeItem('token');
@@ -42,9 +49,12 @@ export const AuthProvider = ({ children }) => {
       setUser(null);
       setToken(null);
       setLoading(false);
-      navigate('/login'); // Redirect to login if no token or userId
+      // Only redirect to /login if not on a public route
+      if (!publicRoutes.includes(location.pathname)) {
+        navigate('/login');
+      }
     }
-  }, [navigate, isUserUpdated]);
+  }, [navigate, isUserUpdated, location.pathname]); // Add location.pathname to dependencies
 
   const login = async (email, password) => {
     try {

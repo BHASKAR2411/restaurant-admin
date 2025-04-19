@@ -229,6 +229,9 @@ const Account = () => {
         <button className="logout-btn" onClick={logout} disabled={loading}>
           Log Out
         </button>
+        <footer className="page-footer">
+          Powered by SAE. All rights reserved.
+        </footer>
         <ToastContainer position="top-right" autoClose={3000} />
       </div>
     </div>

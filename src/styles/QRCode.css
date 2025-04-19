@@ -6,7 +6,8 @@
   margin-left: 220px;
   padding: 2rem;
   flex: 1;
-  background: #f4f4f4;
+  background: url('../assets/header5.png') no-repeat center center fixed;
+  background-size: cover;
   min-height: 100vh;
 }
 
@@ -38,7 +39,7 @@
 }
 
 .qrcode-form button {
-  background: #28a745;
+  background: #55c1ef;
   color: white;
   border: none;
   cursor: pointer;
@@ -46,7 +47,7 @@
 }
 
 .qrcode-form button:hover {
-  background: #218838;
+  background: #1d4999;
 }
 
 .qrcode-form button:disabled {
@@ -57,37 +58,37 @@
 .qr-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 1.5rem; /* Increased gap for better spacing */
+  gap: 1.5rem;
 }
 
 .qr-item {
   text-align: center;
-  background: white;
-  padding: 1.5rem; /* Increased padding for more space inside */
+  background: rgba(255, 255, 255, 0.7);
+  padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s; /* Smooth hover effect */
+  transition: transform 0.2s;
 }
 
 .qr-item:hover {
-  transform: translateY(-3px); /* Slight lift on hover */
+  transform: translateY(-3px);
 }
 
 .qr-item p {
-  margin-bottom: 0.75rem; /* Adjusted margin for better spacing */
+  margin-bottom: 0.75rem;
   color: #34495e;
-  font-weight: 500; /* Slightly bolder text */
+  font-weight: 500;
 }
 
 .qr-item img {
   max-width: 100%;
-  margin-bottom: 1rem; /* Added margin below QR code for spacing */
+  margin-bottom: 1rem;
 }
 
 .qr-actions {
   display: flex;
   justify-content: center;
-  gap: 0.75rem; /* Spacing between buttons */
+  gap: 0.4rem;
 }
 
 .qr-actions button {
@@ -100,19 +101,27 @@
 }
 
 .qr-actions button:first-child {
-  background: #28a745; /* Print button (green) */
+  background: #55c1ef;
   color: white;
 }
 
 .qr-actions button:first-child:hover {
-  background: #218838; /* Darker green on hover */
+  background: #1d4999;
 }
 
 .qr-actions button:last-child {
-  background: #dc3545; /* Delete button (red) */
+  background: #dc3545;
   color: white;
 }
 
 .qr-actions button:last-child:hover {
-  background: #c82333; /* Darker red on hover */
+  background: #c82333;
+}
+
+.page-footer {
+  text-align: center;
+  padding: 1rem 0;
+  color: #34495e;
+  font-size: 0.9rem;
+  margin-top: auto;
 }

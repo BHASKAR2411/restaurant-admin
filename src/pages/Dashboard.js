@@ -54,6 +54,9 @@ const Dashboard = () => {
         <Link to="/orders" className="view-orders-btn">
           View Orders
         </Link>
+        <footer className="page-footer">
+          Powered by SAE. All rights reserved.
+        </footer>
       </div>
     </div>
   );

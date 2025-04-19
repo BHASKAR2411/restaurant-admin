@@ -139,6 +139,9 @@ const Menu = () => {
           <button type="submit">Add Item</button>
         </form>
         <MenuTable menuItems={menuItems} onDelete={handleDelete} />
+        <footer className="page-footer">
+          Powered by SAE. All rights reserved.
+        </footer>
       </div>
     </div>
   );

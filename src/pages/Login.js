@@ -4,6 +4,7 @@ import { AuthContext } from '../context/AuthContext';
 import * as yup from 'yup';
 import { toast } from 'react-toastify';
 import LoadingSpinner from '../components/LoadingSpinner';
+import logo from '../assets/logo.png';
 import '../styles/Login.css';
 
 const schema = yup.object().shape({
@@ -40,12 +41,14 @@ const Login = () => {
     <div className="login-container">
       {loading && <LoadingSpinner />}
       <div className="login-box">
+        <img src={logo} alt="Logo" className="login-logo" />
         <h2>Log In</h2>
         <form onSubmit={handleSubmit}>
           <input
             type="email"
             name="email"
             placeholder="Email"
+            autoComplete="email"
             value={formData.email}
             onChange={handleChange}
             required
@@ -53,6 +56,7 @@ const Login = () => {
           <input
             type="password"
             name="password"
+            autoComplete="current-password"
             placeholder="Password"
             value={formData.password}
             onChange={handleChange}
